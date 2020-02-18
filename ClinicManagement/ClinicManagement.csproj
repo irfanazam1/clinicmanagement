@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6E3E86CE-AA09-4F00-B75D-8E23B12B5A9D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ClinicManagement</RootNamespace>
+    <AssemblyName>ClinicManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql, Version=4.1.2.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.4.1.2\lib\net461\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.6.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=4.0.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.4.6.0\lib\netstandard2.0\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.4.6.0\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.3\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Department\frmRegisterDept.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Department\frmRegisterDept.Designer.cs">
+      <DependentUpon>frmRegisterDept.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doctors\frmSearchDocs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctors\frmSearchDocs.Designer.cs">
+      <DependentUpon>frmSearchDocs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doctors\frmRegisterDocs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctors\frmRegisterDocs.Designer.cs">
+      <DependentUpon>frmRegisterDocs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ambulance\frmDrivers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ambulance\frmDrivers.Designer.cs">
+      <DependentUpon>frmDrivers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ambulance\frmRegisterAmbu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ambulance\frmRegisterAmbu.Designer.cs">
+      <DependentUpon>frmRegisterAmbu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ambulance\frmSearchAmbu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ambulance\frmSearchAmbu.Designer.cs">
+      <DependentUpon>frmSearchAmbu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ambulance\frmTrips.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ambulance\frmTrips.Designer.cs">
+      <DependentUpon>frmTrips.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\DepartmentItem.cs" />
+    <Compile Include="Domain\DepartmentValue.cs" />
+    <Compile Include="Domain\Department.cs" />
+    <Compile Include="Domain\Doctor.cs" />
+    <Compile Include="Doctors\frmDoctorReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctors\frmDoctorReport.Designer.cs">
+      <DependentUpon>frmDoctorReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patients\frmPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patients\frmPatient.Designer.cs">
+      <DependentUpon>frmPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patients\frmSearchPatVisit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patients\frmSearchPatVisit.Designer.cs">
+      <DependentUpon>frmSearchPatVisit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\Patient.cs" />
+    <Compile Include="Domain\PatientVisit.cs" />
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patients\frmPatVisits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patients\frmPatVisits.Designer.cs">
+      <DependentUpon>frmPatVisits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patients\frmRegisterPat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patients\frmRegisterPat.Designer.cs">
+      <DependentUpon>frmRegisterPat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patients\frmSearchPat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patients\frmSearchPat.Designer.cs">
+      <DependentUpon>frmSearchPat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patients\frmSlip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patients\frmSlip.Designer.cs">
+      <DependentUpon>frmSlip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persistence\DbRecord.cs" />
+    <Compile Include="Persistence\IConnection.cs" />
+    <Compile Include="Persistence\IDatabase.cs" />
+    <Compile Include="Persistence\IDBObject.cs" />
+    <Compile Include="Persistence\NpgsqlConnectionImpl.cs" />
+    <Compile Include="Persistence\NpgsqlDatabaseImpl.cs" />
+    <Compile Include="Persistence\SqlUtil.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Util\Utils.cs" />
+    <EmbeddedResource Include="Department\frmRegisterDept.resx">
+      <DependentUpon>frmRegisterDept.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctors\frmRegisterDocs.resx">
+      <DependentUpon>frmRegisterDocs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctors\frmSearchDocs.resx">
+      <DependentUpon>frmSearchDocs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ambulance\frmDrivers.resx">
+      <DependentUpon>frmDrivers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ambulance\frmRegisterAmbu.resx">
+      <DependentUpon>frmRegisterAmbu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ambulance\frmSearchAmbu.resx">
+      <DependentUpon>frmSearchAmbu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ambulance\frmTrips.resx">
+      <DependentUpon>frmTrips.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctors\frmDoctorReport.resx">
+      <DependentUpon>frmDoctorReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patients\frmPatient.resx">
+      <DependentUpon>frmPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patients\frmSearchPatVisit.resx">
+      <DependentUpon>frmSearchPatVisit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patients\frmPatVisits.resx">
+      <DependentUpon>frmPatVisits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patients\frmRegisterPat.resx">
+      <DependentUpon>frmRegisterPat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patients\frmSearchPat.resx">
+      <DependentUpon>frmSearchPat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patients\frmSlip.resx">
+      <DependentUpon>frmSlip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="App.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\692865.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dbsettings.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\DAK Logo.png" />
+    <None Include="Resources\Ayah2.JPG" />
+    <None Include="Resources\Ayah1.JPG" />
+    <None Include="Resources\178885456.jpg" />
+    <Content Include="Resources\80.jpg" />
+    <None Include="Resources\pakistan-monument.jpg" />
+    <None Include="Resources\f276bb1a52102465ff52a3104a06b377.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
